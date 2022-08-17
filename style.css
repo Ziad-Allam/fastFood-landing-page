@@ -249,4 +249,9 @@ body {
         width: 80%;
         text-align: center;
     }
+    
+        .mid-section .text h1 {
+        font-size: 30px;
+    }
+
 }
