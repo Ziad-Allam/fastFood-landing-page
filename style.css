@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+:root {
+    --body-color: #ededed;
+    --bg-color: #fbfbfb;
+    --black-color: #06113d;
+    --gray-color: #646464;
+    --light-color: #ff7200;
+    --transition: 0.4s;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+}
+
+body {
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-page {
+    background-color: var(--bg-color);
+    width: 100%;
+    margin: 2% 5%;
+    box-shadow: 0 0 53px -14px rgba(0, 0, 0, 0.75);
+    border-radius: 2px;
+}
+
+/* header */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 60px;
+}
+
+.logo a {
+    font-size: 22px;
+    color: var(--black-color);
+    font-weight: 600;
+}
+
+.search i:hover {
+    transform: rotate(360deg);
+    color: var(--light-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: end;
+}
+
+.navbar a {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 15px;
+    color: var(--gray-color);
+    transition: var(--transition);
+}
+
+.navbar a:hover {
+    color: var(--black-color);
+}
+
+.navbar a.active {
+    color: var(--black-color);
+}
+
+/* mid section */
+
+.mid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 90px 0;
+}
+
+.text {
+    padding-top: 90px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text h1 {
+    font-size: 50px;
+}
+
+.text p {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.plate-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plate-image img {
+    height: 250px;
+    animation: motion 10s linear infinite alternate;
+}
+
+@keyframes motion {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn {
+    background-color: var(--light-color);
+    color: var(--bg-color);
+    padding: 10px;
+    font-weight: 600;
+    margin-top: 25px;
+    width: 70%;
+    border-radius: 20px;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--black-color);
+}
+
+
+.page-content {
+    background-image: url(./images/menu-bg.png);
+    background-size: cover;
+}
+
+
+.item-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0 0 50px;
+    border-radius: 50px 0 0 50px;
+    background-color: var(--light-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.item-box:hover {
+    margin-left: 5px;
+    background-color: var(--black-color);
+}
+
+.item-box img {
+    height: 80px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.item-box:hover img {
+    transform: rotate(360deg);
+}
+
+.item-box h2 {
+    color: var(--bg-color);
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+/* social */
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 20px 0px;
+}
+
+.social-icons i {
+    font-size: 25px;
+    transition: 0.4s;
+    cursor: pointer;
+    margin: 0px 20px;
+}
+
+.social-icons i:hover {
+    color: var(--light-color);
+}
+
+
+/* responsive */
+
+@media screen and (max-width : 1170px) {
+    .header-container {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+}
+
+@media screen and (max-width : 992px) {
+
+    .mid-section {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text {
+        padding: 30px 0;
+    }
+
+    .plate-image {
+        padding-bottom: 30px;
+    }
+
+    .item-box {
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .social-icons {
+        padding: 0px 0px 30px 0px;
+    }
+
+}
+
+@media screen and (max-width : 795px) {
+
+    .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .text p {
+        width: 80%;
+        text-align: center;
+    }
+}
